@@ -222,7 +222,7 @@ a:hover, a:active, a:focus {
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border-color: transparent;
+border-color: linear-gradient(to left,#FF8C00 , #FF8C00 20%, #eee 45%, #FFF 10%);
 }
 
 .navbar-default .navbar-brand {
@@ -251,7 +251,7 @@ a:hover, a:active, a:focus {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
     color: #777;
-    background-color: transparent;
+	background-color: linear-gradient(to left,#FF8C00 , #FF8C00 20%, #eee 45%, #FFF 10%);
 }
 
 .navbar-default .navbar-nav li a:hover,
