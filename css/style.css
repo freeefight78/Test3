@@ -30,7 +30,7 @@ h1 {
 button {
   float: left;
 }
-#name, #email {
+#name, #email, #Numero, #Date {
   width: 75%;
 }
 
