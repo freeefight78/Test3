@@ -24,6 +24,17 @@ h1 {
     margin-bottom: 0px;
 }
 
+.button-xlarge {
+  font-size: 200%;
+}
+button {
+  float: right;
+}
+#name, #email {
+  width: 50%;
+}
+
+
 h2 {
   font-size: 32px;
   line-height: 46px;
