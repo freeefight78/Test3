@@ -25,12 +25,12 @@ h1 {
 }
 
 .button-xlarge {
-  font-size: 200%;
+  font-size: 400%;
 }
 button {
-  float: left;
+  float: right;
 }
-#name, #email, #Numero, #Date {
+#name, #email, #Numero, #Date, #start{
   width: 75%;
 }
 
