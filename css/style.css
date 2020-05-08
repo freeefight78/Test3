@@ -28,10 +28,10 @@ h1 {
   font-size: 200%;
 }
 button {
-  float: right;
+  float: left;
 }
 #name, #email {
-  width: 100%;
+  width: 75%;
 }
 
 
