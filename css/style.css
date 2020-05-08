@@ -39,7 +39,11 @@ button {
 }
 
 #message {
-  width: 150%;
+  width: 300%;
+}
+
+#Ping {
+  width: 20%;
 }
 
 
