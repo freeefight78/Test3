@@ -34,6 +34,14 @@ button {
   width: 75%;
 }
 
+#Stage {
+  width: 75%;
+}
+
+#message {
+  width: 150%;
+}
+
 
 h2 {
   font-size: 32px;
