@@ -84,24 +84,161 @@
                               </fieldset>
                          </div>
                          <div class="col-md-6 col-sm-6">
-                              <input type="email" class="form-control" placeholder="Email">
+                                <fieldset>
+                       <label for="Stage">Intitule de la formation :</label>
+                      <input id="Stage" name="Stage" placeholder="Azure AZ 900" />
+                     </fieldset>
                          </div>
                          <div class="col-md-6 col-sm-6">
-                              <input type="telephone" class="form-control" placeholder="Phone Number">
-                         </div>
+                              <fieldset>
+             <label for="email">Merci d'indiquer votre adresse Mail :</label>
+            <input id="email" name="email" type="email" value=""
+                   required placeholder="Nom.prénom@gmail.com"/>
+            </fieldset>
+                        </div>
                          <div class="col-md-6 col-sm-6">
-                              <select class="form-control">
-                                   <option>Budget Select</option>
-                                   <option>$1200 to $1600</option>
-                                   <option>$2200 to $2400</option>
-                                   <option>$2500 to $3800</option>
-                              </select>
+                               <table class="t2"> <!-- IC-->
+         
+            
+               <tr>
+        <fieldset class="pure-group">
+            <td><label for="Download">Debit montant ( Download ) : </label></td>
+            <td><label for="Upload">Debit descendant ( Upload ) : </label></td>
+            <td><label for="Ping">Ping : </label></td>
+            <iframe style="border:none;position:center;width="560" height="315";overflow:auto;" src="//openspeedtest.com/Get-widget.php?Auto=10"></iframe></div>
+             </fieldset>
+            </tr>
+              <tr>
+        <fieldset class="pure-group">
+            <td><input id="Download" name="Download" placeholder="27 Mbps" /></td>
+        <td><input id="Upload" name="Upload" placeholder="22 Mbps" /></td> 
+            <td><input id="Ping" name="Ping" placeholder="31 Ms" /></td> 
+                  </fieldset>
+            </tr>
+          
+        </table>
+                            
                          </div>
                          <div class="col-md-12 col-sm-12"> 
-                              <textarea class="form-control" rows="5" placeholder="Project Details"></textarea>
+                           <table class="t2">
+            <tr> 
+                <td>
+        <!--Ca COmmence ICI le test micro cam-->
+         
+    <div id="container">
+      <div style="text-align: left">
+        
+        <br>
+        <audio id="gum-audio"></audio>
+        <br>
+        <a id="button" class="btn-learnmore-orange" style="width: 15%; font-size: 200%; font-weight: bold;" onclick="toggleTest()">Start Test</a>
+         <br> <font size="5"><p>&nbsp;&nbsp;<b>La webcam ne peu ne pas s'afficher, il est conseillé d'utiliser Google Chrome</b></font></font>
+        <!--<p style="font-size: 150%; padding-top: 3%;"><strong>Attention :</strong>Si vous n'utilisez pas le Navigateur Chrome il est possible que vous n'ayez pas de retour Vidéo, mais vous pouvez tout de meme testé le micro .Si vous n'utilisez pas d'écouteurs, une pression sur Start Test provoquera un retour.</p>-->
+        <p style="font-size: 150%; padding-top: 3%; font-weight: bold; color: orange;" id="errorMsg"></p>
+         <video id="gum-video" playsinline style="width: 65%"></video> 
+        <!--<!-- Trigger/Open The Modal -->
+        <!-- ICI LE BOUTON AIDE <button id="help-button" class="btn-learnmore-blue">Aide?</button> -->
+        <!-- The Modal -->
+       <div id="myModal" class="modal">
+          <!-- Modal content -->
+         <div class="modal-content">
+            <span class="close">&times;</span>
+            <!--<br>
+            <ol>
+              <li>La caméra n'apparait pas, il faudra utilisé le navigateur Google Chrome</li>
+              <li>Vous n'avez pas de retour de votre casque, assurez vous d'avoir bien connecté le casque</li>
+              <li></li>
+              <li>Click “Accept and Install” after reading the Terms of Service. The installer will start and you will have Google Chrome installed when it has finished. Depending on your browser settings, you may need to allow the program to run.</li>
+              <li>Sign in to Chrome. After installing, a Chrome window will open showing first-time use information.</li>-->
+           <!-- </ol> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/adapter-latest.js"></script>
+    <script src="./js/video.js"></script>
+    <script src="./js/audio.js"></script>
+    <script type="text/javascript">
+      function toggleTest() {
+        var but = document.getElementById("button");
+        var vid = document.getElementById("gum-video");
+        var aud = document.getElementById("gum-audio");
+      
+        if (but.innerHTML == "Start Test") {
+          but.innerHTML = "Stop Test";
+          vid.play();
+          aud.play();
+        } else {
+          but.innerHTML = "Start Test";
+          vid.pause();
+          aud.pause();
+        }
+      }
+    </script>
+    <script>
+        
+        </table>
+        
+      // Get the modal
+      var modal = document.getElementById('myModal');
+      
+      // Get the button that opens the modal
+      var btn = document.getElementById("help-button");
+      
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+      
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+    </script>
+               </td>
+                      <td>
+                </td>
+            </tr>
+                                  
+  
+           <!--TEST MICRO FIN ICI-->
+                <table class="t2"> <!-- Question SON ICI-->
+         
+            
+               <tr>
+        <fieldset class="pure-group">
+            <td><label for="Video">Avez-vous une Webcam : </label></td>
+            <td><label for="Son">Avez-vous le retour du Micro : </label></td>
+            </fieldset>
+            </tr>
+              <tr>
+        <fieldset class="pure-group">
+            <td><input id="Video" name="Video" placeholder="Oui / Non" /></td>
+        <td><input id="Son" name="Son" placeholder="Oui / Non" /></td> 
+           </fieldset>
+            </tr>
+          
+        </table>
+          
                          </div>
                          <div class="col-md-3 col-sm-4">
-                              <input type="submit" class="form-control" value="Send Message">
+                            <fieldset class="pure-group">
+        <label for="message">Avez vous des questions : </label>
+        <textarea id="message" name="message" rows="10"
+        placeholder="....."></textarea>
+      </fieldset>
+     
+     
                          </div>
                     </form>
                </div>
