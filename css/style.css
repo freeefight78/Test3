@@ -28,7 +28,7 @@ h1 {
   font-size: 400%;
 }
 button {
-  float: right;
+  float: none;
 }
 #name, #email, #Numero, #Date, #start{
   width: 75%;
@@ -39,7 +39,7 @@ button {
 }
 
 #message {
-  width: 220%;
+  width: 150%;
 }
 
 #Ping {
