@@ -28,7 +28,7 @@ h1 {
   font-size: 400%;
 }
 button {
-  float: none;
+  float: right;
 }
 #name, #email, #Numero, #Date, #start{
   width: 75%;
@@ -47,11 +47,11 @@ button {
 }
 
 #Download, #Upload {
-  width: 65%;
+  width: 70%;
 }
 
 #Video, #Son {
-  width: 65%;
+  width: 70%;
 }
 
 label {
