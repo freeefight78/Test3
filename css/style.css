@@ -47,7 +47,11 @@ button {
 }
 
 #Download, #Upload {
-  width: 50%;
+  width: 65%;
+}
+
+#Video, #Son {
+  width: 65%;
 }
 
 label {
