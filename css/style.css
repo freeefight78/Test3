@@ -279,7 +279,7 @@ a:hover, a:active, a:focus {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus { 
-  background-color: transparent;
+ background-color: linear-gradient(to left, orange , white);
 }
 
 
