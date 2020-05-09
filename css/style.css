@@ -215,7 +215,7 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 
 .navbar-default {
-    background: linear-gradient(to top, #ff9900 -50%, #ffffff 34%);
+    background: linear-gradient(to top, #ff9900 -50%, #ffffff 15%);
     padding: 18px 0;
     border: none;
     margin-top: 62px;
