@@ -24,7 +24,7 @@
     var formData = {};
     fields.forEach(function(name){
       var element = elements[name];
-      
+
       // singular form elements just have one value
       formData[name] = element.value;
 
@@ -55,6 +55,7 @@
     var form = event.target;
     var formData = getFormData(form);
     var data = formData.data;
+    data.Stage = $('#Stage').selectivity('value');
 
     // If a honeypot field is filled, assume it was done so by a spam bot.
     if (formData.honeypot) {
@@ -77,16 +78,40 @@
           var thankYouMessage = form.querySelector(".thankyou_message");
           if (thankYouMessage) {
             thankYouMessage.style.display = "block";
+
+            var bodyContent = document.querySelector('#body-content');
+            if (bodyContent) {
+              bodyContent.hidden = true;
+            }
           }
         }
     };
-    // url encode form data for sending as post data
-    var encoded = Object.keys(data).map(function(k) {
+
+    var download = parseInt($('#Download').val()) || 0;
+    var upload = parseInt($('#Upload').val()) || 0;
+
+    navigator.permissions.query(
+        { name: 'microphone' }
+    ).then(function(permissionStatus){
+      var testStatus = 'PAS OK';
+      console.log(permissionStatus.state, download, upload);
+
+      if (permissionStatus.state === 'granted' && download > 0 && upload > 0) {
+        testStatus = 'OK';
+        $('#result').text('Le test est concluant, vous allez pouvoir suivre la formation.');
+      } else {
+        $('#result').text('Malheureusement vous ne disposé pas des prérequis technique');
+      }
+
+      data.resultat_test = testStatus;
+      // url encode form data for sending as post data
+      var encoded = Object.keys(data).map(function(k) {
         return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-    }).join('&');
-    xhr.send(encoded);
+      }).join('&');
+      xhr.send(encoded);
+    })
   }
-  
+
   function loaded() {
     // bind to the submit event of our form
     var forms = document.querySelectorAll("form.gform");

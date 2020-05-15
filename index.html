@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/webcam.css">
      <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    
+    <link href="js/selectivity-3.1.0/selectivity-jquery.min.css" rel="stylesheet" />
 
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
@@ -68,166 +68,174 @@
 <!-- Contact Section -->
 
 <section id="contact">
-     <div class="container">
-          <div class="row">
+    <div class="thankyou_message" style="display:none;">
+        <h2><em id="result"></em></h2>
+    </div>
 
-               <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <div id="body-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10 col-sm-12">
                     <div class="section-title">
-                         <h2>Tests pour le distanciel</h2>
-                         <h3>Une fois les tests effectués n'oubliez pas de cliquer sur "Envoyer" en bas de la page.</h3>
+                        <h2>Tests pour le distanciel</h2>
+                        <h3>Une fois les tests effectués n'oubliez pas de cliquer sur "Envoyer" en bas de la page.</h3>
                     </div>
-                                  
-                         <div>
-                               <fieldset class="col-md-6 col-sm-6">
-                              <label for="name">Nom et Prénom</label>
-                              <input id="name" name="name" placeholder="Exemple : Aires Jérémy" />
-                              </fieldset>
-                         </div>
-                         <div class="col-md-6 col-sm-6">
-                                <fieldset>
-                       <label for="Stage">Intitulé de la formation</label>
-                      <input id="Stage" name="Stage" placeholder="Azure AZ 900" />
-                     </fieldset>
-                         </div>
-                         <div class="col-md-6 col-sm-6">
-                              <fieldset>
-             <label for="email">Votre adresse Mail</label>
-            <input id="email" name="email" type="email" value=""
-                   required placeholder="Nom.prénom@gmail.com"/>
-            </fieldset>
-                        </div>
-                    
-                     <div class="col-md-6 col-sm-6">
-                    <fieldset>
-             <label for="Date">Date de formation</label>
-                         <input type="date" name="Date" id="start" name="trip-start"
-       value=""
-       min="2020-01-01" max="2020-12-31">
-            </fieldset>
-                        </div>
-                    
+
+                    <div>
+                        <fieldset class="col-md-6 col-sm-6">
+                            <label for="name">Nom et Prénom</label>
+                            <input id="name" name="name" placeholder="Exemple : Aires Jérémy" />
+                        </fieldset>
+                    </div>
                     <div class="col-md-6 col-sm-6">
-                    <fieldset>
-             <label for="Numero">Téléphone (facultatif)</label>
-             <input id="Numero" name="Numero" placeholder="07 .. .. .. .." />
-            </fieldset>
+                        <fieldset>
+                            <label for="Stage">Intitulé de la formation</label>
+                            <!--                      <input id="Stage" name="Stage" placeholder="Azure AZ 900" />-->
+                            <span id="Stage" class="selectivity-input"></span>
+                        </fieldset>
+                    </div>
+                    <div id="show_formation_software_installed" style="display: none;">
+                        <div class="col-md-6 col-sm-6"></div>
+                        <div class="col-md-6 col-sm-6">
+                            <fieldset>
+                                <label for="formation_software_installed">Disposez-vous de <span id="title_formation_software_installed"></span> sur votre poste ?</label>
+                                <select name="formation_software_installed" id="formation_software_installed">
+                                    <option value="non">non</option>
+                                    <option value="oui">oui</option>
+                                </select>
+                            </fieldset>
                         </div>
-                    
-                
-               
-                         <div class="col-md-6 col-sm-6">
-                               <table class="t2"> <!-- IC-->
-         
-            
-               <tr>
-        <fieldset class="pure-group">
-            <td><label for="Download">Debit montant (Download) </label></td>
-              <td><label for="Upload">Debit descendant (Upload) </label></td>
-             <td><label for="Ping">Ping </label></td>
-            <iframe style="border:none;position:center;width="560" height="315";overflow:auto;" src="//openspeedtest.com/Get-widget.php?Auto=10"></iframe></div>
-             </fieldset>
-            </tr>
-              <tr>
-        <fieldset class="pure-group">
-            <td><input id="Download" name="Download" placeholder="? Mbps" /></td>
-             <td><input id="Upload" name="Upload" placeholder="? Mbps" /></td>
-             <td><input id="Ping" name="Ping" placeholder="? Ms" /></td> 
-                  </fieldset>
-            </tr>
-          
-        </table>
-                            
-                         </div>
-                         <div class="col-md-12 col-sm-12"> 
-                           <table class="t2">
-            <tr> 
-                <td>
-        <!--Ca COmmence ICI le test micro cam-->
-         
-    <div id="container">
-      <div style="text-align: left">
-        
-        <br>
-        <audio id="gum-audio"></audio>
-        <br>
-        <a id="button" class="btn-learnmore-orange" style="width: 15%; font-size: 200%; font-weight: bold;" onclick="toggleTest()">Start Test</a>
-         <br> <font size="5"><p>&nbsp;&nbsp;<b>La webcam peut ne pas s'afficher. Il est conseillé d'utiliser Google Chrome</b></font></font>
-        <!--<p style="font-size: 150%; padding-top: 3%;"><strong>Attention :</strong>Si vous n'utilisez pas le Navigateur Chrome il est possible que vous n'ayez pas de retour Vidéo, mais vous pouvez tout de meme testé le micro .Si vous n'utilisez pas d'écouteurs, une pression sur Start Test provoquera un retour.</p>-->
-        <p style="font-size: 150%; padding-top: 3%; font-weight: bold; color: orange;" id="errorMsg"></p>
-         <video id="gum-video" playsinline style="width: 65%"></video> 
-        <!--<!-- Trigger/Open The Modal -->
-        <!-- ICI LE BOUTON AIDE <button id="help-button" class="btn-learnmore-blue">Aide?</button> -->
-        <!-- The Modal -->
-       <div id="myModal" class="modal">
-          <!-- Modal content -->
-         <div class="modal-content">
-            <span class="close">&times;</span>
-            <!--<br>
-            <ol>
-              <li>La caméra n'apparait pas, il faudra utilisé le navigateur Google Chrome</li>
-              <li>Vous n'avez pas de retour de votre casque, assurez vous d'avoir bien connecté le casque</li>
-              <li></li>
-              <li>Click “Accept and Install” after reading the Terms of Service. The installer will start and you will have Google Chrome installed when it has finished. Depending on your browser settings, you may need to allow the program to run.</li>
-              <li>Sign in to Chrome. After installing, a Chrome window will open showing first-time use information.</li>-->
-           <!-- </ol> -->
-          </div>
-        </div>
-      </div>
-    </div>
-   
-      
-                      <td>
-                </td>
-            </tr>
-                                  
-  
-           <!--TEST MICRO FIN ICI-->
-                <table class="t2"> <!-- Question SON ICI-->
-         
-            
-               <tr>
-        <fieldset class="pure-group">
-            <td><label for="Video">Avez-vous une Webcam </label></td>
-            <td><label for="Son">Avez-vous un retour Micro </label></td>
-            </fieldset>
-            </tr>
-              <tr>
-        <fieldset class="pure-group">
-            <td><input id="Video" name="Video" placeholder="Oui / Non" /></td>
-        <td><input id="Son" name="Son" placeholder="Oui / Non" /></td> 
-           </fieldset>
-            </tr>
-          
-        </table>
-          
-                         </div>
-                         <div class="col-md-6 col-sm-6">
-                            <fieldset class="pure-group">
-        <label for="message">Avez-vous des questions </label><br>
-        <textarea id="message" name="message" rows="5" placeholder="....."></textarea>
-      </fieldset>
-       </div>
-          
-      <div class="col-md-6 col-sm-6">
-           <fieldset>
-      <br><br> <button class="button-success pure-button button-xlarge">
-        <i class="fa fa-paper-plane"></i>&nbsp;Envoyer</button>
-                </fieldset>
-    </div>
-          
-           <div class="thankyou_message" style="display:none;">
-      <h2><em>Merci d'avoir effectué les tests, ils ont bien été envoyés au Support technique</em></h2>
-    </div>
-        
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <fieldset>
+                            <label for="email">Votre adresse Mail</label>
+                            <input id="email" name="email" type="email" value=""
+                                   required placeholder="Nom.prénom@gmail.com"/>
+                        </fieldset>
+                    </div>
 
-     
-                    </form>
-     
-   
-               </div>
+                    <div class="col-md-6 col-sm-6">
+                        <fieldset>
+                            <label for="Date">Date de formation</label>
+                            <input type="date" name="Date" id="start" name="trip-start"
+                                   value=""
+                                   min="2020-01-01" max="2020-12-31">
+                        </fieldset>
+                    </div>
 
-          </div>
-     </div>
+                    <div class="col-md-6 col-sm-6">
+                        <fieldset>
+                            <label for="Numero">Téléphone (facultatif)</label>
+                            <input id="Numero" name="Numero" placeholder="07 .. .. .. .." />
+                        </fieldset>
+                    </div>
+
+
+
+                    <div class="col-md-6 col-sm-6">
+                        <table class="t2"> <!-- IC-->
+
+
+                            <tr>
+                                <fieldset class="pure-group">
+                                    <td><label for="Download">Debit montant (Download) </label></td>
+                                    <td><label for="Upload">Debit descendant (Upload) </label></td>
+                                    <td><label for="Ping">Ping </label></td>
+                                    <iframe style="border:none;position:center;width="560" height="315";overflow:auto;" src="//openspeedtest.com/Get-widget.php?Auto=10"></iframe></div>
+                    </fieldset>
+                    </tr>
+                    <tr>
+                        <fieldset class="pure-group">
+                            <td><input id="Download" name="Download" placeholder="? Mbps" /></td>
+                            <td><input id="Upload" name="Upload" placeholder="? Mbps" /></td>
+                            <td><input id="Ping" name="Ping" placeholder="? Ms" /></td>
+                        </fieldset>
+                    </tr>
+
+                    </table>
+
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <table class="t2">
+                        <tr>
+                            <td>
+                                <!--Ca COmmence ICI le test micro cam-->
+
+                                <div id="container">
+                                    <div style="text-align: left">
+
+                                        <br>
+                                        <audio id="gum-audio"></audio>
+                                        <br>
+                                        <a id="button" class="btn-learnmore-orange" style="width: 15%; font-size: 200%; font-weight: bold;" onclick="toggleTest()">Start Test</a>
+                                        <br> <font size="5"><p>&nbsp;&nbsp;<b>La webcam peut ne pas s'afficher. Il est conseillé d'utiliser Google Chrome</b></font></font>
+                                        <!--<p style="font-size: 150%; padding-top: 3%;"><strong>Attention :</strong>Si vous n'utilisez pas le Navigateur Chrome il est possible que vous n'ayez pas de retour Vidéo, mais vous pouvez tout de meme testé le micro .Si vous n'utilisez pas d'écouteurs, une pression sur Start Test provoquera un retour.</p>-->
+                                        <p style="font-size: 150%; padding-top: 3%; font-weight: bold; color: orange;" id="errorMsg"></p>
+                                        <video id="gum-video" playsinline style="width: 65%"></video>
+                                        <!--<!-- Trigger/Open The Modal -->
+                                        <!-- ICI LE BOUTON AIDE <button id="help-button" class="btn-learnmore-blue">Aide?</button> -->
+                                        <!-- The Modal -->
+                                        <div id="myModal" class="modal">
+                                            <!-- Modal content -->
+                                            <div class="modal-content">
+                                                <span class="close">&times;</span>
+                                                <!--<br>
+                                                <ol>
+                                                  <li>La caméra n'apparait pas, il faudra utilisé le navigateur Google Chrome</li>
+                                                  <li>Vous n'avez pas de retour de votre casque, assurez vous d'avoir bien connecté le casque</li>
+                                                  <li></li>
+                                                  <li>Click “Accept and Install” after reading the Terms of Service. The installer will start and you will have Google Chrome installed when it has finished. Depending on your browser settings, you may need to allow the program to run.</li>
+                                                  <li>Sign in to Chrome. After installing, a Chrome window will open showing first-time use information.</li>-->
+                                                <!-- </ol> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            <td>
+                            </td>
+                        </tr>
+
+
+                        <!--TEST MICRO FIN ICI-->
+                        <table class="t2"> <!-- Question SON ICI-->
+
+
+                            <tr>
+                                <fieldset class="pure-group">
+                                    <td><label for="Video">Avez-vous une Webcam </label></td>
+                                    <td><label for="Son">Avez-vous un retour Micro </label></td>
+                                </fieldset>
+                            </tr>
+                            <tr>
+                                <fieldset class="pure-group">
+                                    <td><input id="Video" name="Video" placeholder="Oui / Non" /></td>
+                                    <td><input id="Son" name="Son" placeholder="Oui / Non" /></td>
+                                </fieldset>
+                            </tr>
+
+                        </table>
+
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <fieldset class="pure-group">
+                        <label for="message">Avez-vous des questions </label><br>
+                        <textarea id="message" name="message" rows="5" placeholder="....."></textarea>
+                    </fieldset>
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+                    <fieldset>
+                        <br><br> <button class="button-success pure-button button-xlarge">
+                        <i class="fa fa-paper-plane"></i>&nbsp;Envoyer</button>
+                    </fieldset>
+                </div>
+       </form>
+</div>
+</div>
+</div>
+    </div>
 </section>
 
 <!-- Footer Section -->
@@ -244,7 +252,7 @@
                <div class="col-md-4 col-sm-4">
                     <p>1 place de la pyramide, PUTEAUX</p>
                </div>
-               
+
                 <div class="col-md-5 col-sm-5">
                          <p>Ib Formation | By Aires Ribeiro Jérémy.</p>
                     </div>
@@ -271,18 +279,39 @@
                          <li><a href="#" class="fa fa-linkedin"></a></li>
                     </ul>
                </div>-->
-               
+
           </div>
      </div>
 </footer>
 
 
 <!-- SCRIPTS -->
-   
+
 <script data-cfasync="false" src="form-submission-handler.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/selectivity-3.1.0/selectivity-jquery.min.js"></script>
+<script>
+    var stageSelector = $('#Stage');
+    stageSelector.selectivity({
+        allowClear: true,
+        items: [
+            'Excel 2016',
+            'Word 2013',
+            'AZ900',
+        ],
+        placeholder: 'Azure AZ 900'
+    });
+    stageSelector.on('change', function () {
+        var value = stageSelector.selectivity('value');
+        $('#show_formation_software_installed').css('display', 'none');
+        if (['Excel 2016', 'Word 2013'].includes(value)) {
+            $('#show_formation_software_installed').css('display', '');
+            $('#title_formation_software_installed').text(value);
+        }
+    })
+</script>
 
  <script src="./js/adapter-latest.js"></script>
     <script src="./js/video.js"></script>
@@ -292,7 +321,7 @@
         var but = document.getElementById("button");
         var vid = document.getElementById("gum-video");
         var aud = document.getElementById("gum-audio");
-      
+
         if (but.innerHTML == "Start Test") {
           but.innerHTML = "Stop Test";
           vid.play();
@@ -305,28 +334,28 @@
       }
     </script>
     <script>
-        
+
         </table>
-        
+
       // Get the modal
       var modal = document.getElementById('myModal');
-      
+
       // Get the button that opens the modal
       var btn = document.getElementById("help-button");
-      
+
       // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close")[0];
-      
-      // When the user clicks the button, open the modal 
+
+      // When the user clicks the button, open the modal
       btn.onclick = function() {
           modal.style.display = "block";
       }
-      
+
       // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
           modal.style.display = "none";
       }
-      
+
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
           if (event.target == modal) {
