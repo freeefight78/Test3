@@ -9,7 +9,7 @@ body {
 
 
 /*---------------------------------------
-    Typorgraphy              
+    Typorgraphy
 -----------------------------------------*/
 
 h1,h2,h3,h4,h5,h6 {
@@ -96,7 +96,7 @@ strong {
 
 
 /*---------------------------------------
-    General               
+    General
 -----------------------------------------*/
 
 html{
@@ -152,7 +152,7 @@ a:hover, a:active, a:focus {
 
 
 /*---------------------------------------
-    Preloader section              
+    Preloader section
 -----------------------------------------*/
 
 .preloader {
@@ -176,7 +176,7 @@ a:hover, a:active, a:focus {
   border-radius: 40px;
   position: relative;
   -webkit-animation: sk-innerCircle 1s linear infinite;
-  animation: sk-innerCircle 1s linear infinite; 
+  animation: sk-innerCircle 1s linear infinite;
 }
 
 .sk-spinner-wordpress .sk-inner-circle {
@@ -187,7 +187,7 @@ a:hover, a:active, a:focus {
   position: absolute;
   border-radius: 8px;
   top: 5px;
-  left: 5px; 
+  left: 5px;
 }
 
 @-webkit-keyframes sk-innerCircle {
@@ -211,7 +211,7 @@ a:hover, a:active, a:focus {
 
 
 /*---------------------------------------
-    Main Navigation             
+    Main Navigation
 -----------------------------------------*/
 
 .navbar-default {
@@ -262,9 +262,9 @@ a:hover, a:active, a:focus {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: #333;
-	
+
     background-color: linear-gradient(to left, orange , white);
-   
+
 }
 
 .navbar-default .navbar-toggle {
@@ -278,14 +278,14 @@ a:hover, a:active, a:focus {
   }
 
 .navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus { 
+.navbar-default .navbar-toggle:focus {
  background-color: linear-gradient(to left, orange , white);
 }
 
 
 
 /*---------------------------------------
-    Home section              
+    Home section
 -----------------------------------------*/
 
 #home {
@@ -313,7 +313,7 @@ a:hover, a:active, a:focus {
 
 
 /*---------------------------------------
-   About section              
+   About section
 -----------------------------------------*/
 
 #about .text-center {
@@ -350,7 +350,7 @@ a:hover, a:active, a:focus {
 
 
 /*---------------------------------------
-   Portfolio section              
+   Portfolio section
 -----------------------------------------*/
 
 #portfolio small {
@@ -402,7 +402,7 @@ a:hover, a:active, a:focus {
 
 
 /*---------------------------------------
-   Single Project section              
+   Single Project section
 -----------------------------------------*/
 
 #single-project {
@@ -435,7 +435,7 @@ a:hover, a:active, a:focus {
 
 
 /*---------------------------------------
-   Contact section              
+   Contact section
 -----------------------------------------*/
 
 #contact .col-md-6,
@@ -455,7 +455,7 @@ a:hover, a:active, a:focus {
   border-color: #777;
 }
 
-#contact input,
+#contact input :not(.selectivity-single-select-input),
 #contact select {
   height: 50px;
 }
@@ -476,7 +476,7 @@ a:hover, a:active, a:focus {
 
 
 /*---------------------------------------
-   Blog section              
+   Blog section
 -----------------------------------------*/
 
 .blog-post-thumb {
@@ -628,7 +628,7 @@ a:hover, a:active, a:focus {
 
 
 /*---------------------------------------
-   Blog Single Post section              
+   Blog Single Post section
 -----------------------------------------*/
 
 #blog-single-post .blog-post-des h3 {
@@ -638,7 +638,7 @@ a:hover, a:active, a:focus {
 
 
 /*---------------------------------------
-   Footer section              
+   Footer section
 -----------------------------------------*/
 
 footer {
@@ -667,7 +667,7 @@ footer .footer-copyright {
 
 
 /*---------------------------------------
-   Social icon             
+   Social icon
 -----------------------------------------*/
 
 .social-icon {
@@ -702,7 +702,7 @@ footer .footer-copyright {
 
 
 /*---------------------------------------
-   Mobile Responsive         
+   Mobile Responsive
 -----------------------------------------*/
 
 
