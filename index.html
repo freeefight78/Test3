@@ -298,6 +298,7 @@
         allowClear: true,
         items: [
             'Excel 2016',
+            'B206-16 - Excel 2016 - Initiation macro-commandes',
             'Word 2013',
             'AZ900',
         ],
@@ -306,7 +307,7 @@
     stageSelector.on('change', function () {
         var value = stageSelector.selectivity('value');
         $('#show_formation_software_installed').css('display', 'none');
-        if (['Excel 2016', 'Word 2013'].includes(value)) {
+        if (['Excel 2016', 'Word 2013', 'B206-16 - Excel 2016 - Initiation macro-commandes'].includes(value)) {
             $('#show_formation_software_installed').css('display', '');
             $('#title_formation_software_installed').text(value);
         }
