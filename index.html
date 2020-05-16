@@ -299,6 +299,8 @@
         items: [
             'Excel 2016',
             'B206-16 - Excel 2016 - Initiation macro-commandes',
+            'B302-19 - Word 2019 - Fonctions avancées : documents longs et publipostages',
+            'B501-19 - PowerPoint 2019 - Créations de présentations enrichies et interactives',
             'Word 2013',
             'AZ900',
         ],
@@ -307,7 +309,9 @@
     stageSelector.on('change', function () {
         var value = stageSelector.selectivity('value');
         $('#show_formation_software_installed').css('display', 'none');
-        if (['Excel 2016', 'Word 2013', 'B206-16 - Excel 2016 - Initiation macro-commandes'].includes(value)) {
+        if (['Excel 2016', 'Word 2013', 'B206-16 - Excel 2016 - Initiation macro-commandes',
+             'B302-19 - Word 2019 - Fonctions avancées : documents longs et publipostages',
+             'B501-19 - PowerPoint 2019 - Créations de présentations enrichies et interactives'].includes(value)) {
             $('#show_formation_software_installed').css('display', '');
             $('#title_formation_software_installed').text(value);
         }
