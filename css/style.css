@@ -35,7 +35,8 @@ button {
 }
 
 #Stage {
-  width: 100%;
+  width: 150%;
+  position : static;
 }
 
 #message {
