@@ -12,9 +12,10 @@
 
 .selectivity-input {
   display: inline-block;
-  width: 250px; }
+  width: 250px;}
   .selectivity-input select {
-    display: static; }
+    display: none;
+    position: fixed;}
 
 .selectivity-input:focus {
   outline: none; }
