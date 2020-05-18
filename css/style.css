@@ -29,7 +29,6 @@ h1 {
 }
 button {
   float: right;
-  width: 50%;
 }
 #name, #email, #Numero, #Date, #start{
   width: 75%;
