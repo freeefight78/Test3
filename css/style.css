@@ -36,6 +36,7 @@ button {
 
 #Stage {
   width: 90%;
+  display: inline-block;
 }
 
 #message {
