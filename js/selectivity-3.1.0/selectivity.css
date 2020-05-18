@@ -14,7 +14,7 @@
   display: inline-block;
   width: 250px; }
   .selectivity-input select {
-    display: none; }
+    display: static; }
 
 .selectivity-input:focus {
   outline: none; }
