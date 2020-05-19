@@ -36,7 +36,6 @@ button {
 
 #Stage {
   width: 90%;
-  position:relative;
 }
 
 #Ping {
@@ -438,6 +437,7 @@ a:hover, a:active, a:focus {
 #contact .col-md-6,
 #contact .col-md-12 {
   padding-left: 0px;
+	position:relative;
 }
 
 #contact .form-control {
