@@ -159,7 +159,7 @@
                   <audio id="gum-audio"></audio>
                                  <br>
                                  <br>
-                                   <a id="button" class="btn-learnmore-orange" style="width: 86%; font-size: 200%; font-weight: bold;" onclick="toggleTest()">Start Test</a>
+                                   <a id="button" class="btn-learnmore-orange" style="width: 86%; font-size: 200%; font-weight: bold;" onclick="toggleTest()">Cliquer ici pour démarrer le test video / audio</a>
                                    <p style="font-size: 150%; padding-top: 3%; font-weight: bold; color: orange;" id="errorMsg"></p>
                                   
                   
@@ -290,7 +290,7 @@
                </div>
 
                 <div class="col-md-5 col-sm-5">
-                         <p>Ib Formation | By Aires Ribeiro Jérémy.</p>
+                     <p>Ib Formation | <font size=0.2rem ><em>by Aires Ribeiro Jérémy</em></font></p>
                     </div>
 
               <!-- <div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-3">
@@ -360,12 +360,12 @@
         var vid = document.getElementById("gum-video");
         var aud = document.getElementById("gum-audio");
 
-        if (but.innerHTML == "Start Test") {
+        if (but.innerHTML == "Cliquer ici pour démarrer le test video / audio") {
           but.innerHTML = "Stop Test";
           vid.play();
           aud.play();
         } else {
-          but.innerHTML = "Start Test";
+          but.innerHTML = "Cliquer ici pour démarrer le test video / audio";
           vid.pause();
           aud.pause();
         }
