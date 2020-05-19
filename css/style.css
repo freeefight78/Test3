@@ -36,8 +36,9 @@ button {
 
 #Stage {
   width: 90%;
-position: fixed;
+position: relative;
 	top: 0;
+display:inline-block;
 }
 
 #Ping {
