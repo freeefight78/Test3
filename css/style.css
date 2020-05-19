@@ -36,7 +36,7 @@ button {
 
 #Stage {
   width: 90%;
-position: relative;
+position: static;
 	top: 0;
 display:inline-block;
 }
