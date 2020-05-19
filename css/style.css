@@ -452,10 +452,10 @@ a:hover, a:active, a:focus {
   border-color: #777;
 }
 
-/* #contact input :not(.selectivity-single-select-input),
+#contact input :not(.selectivity-single-select-input),
 #contact select {
   height: 50px;
-} */
+} 
 
 #contact input[type="submit"] {
   background: #222;
